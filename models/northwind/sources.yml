@@ -1,0 +1,6 @@
+version: 2
+
+sources:
+- name: northwind-328309
+table:
+- name: orders

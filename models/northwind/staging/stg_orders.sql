@@ -1,24 +1,19 @@
-with
-    source data as (
-
-select 
-  order_id
-, customer_id
-, employee_id
-, order_date
-, required_date
-, shipped_date
-, ship_via
-, freight
-, ship_name
-, ship_address
-, ship_city
-, ship_region
-, ship_postal_code
-, ship_country
-
-from {{ source('northwind-328309', 'orders') }}
-
+with source_data as (
+    select
+    order_id
+        , ship_region
+        , shipped_date
+        , ship_country
+        , ship_name
+        , employee_id
+        , order_date
+        , customer_id
+        , ship_postal_code
+        , ship_city
+        , freight
+        , ship_via
+        , required_date
+        , ship_address
+    from {{ source('northwind_etl', 'orders') }}
 )
-
 select * from source_data

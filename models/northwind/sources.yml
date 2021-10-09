@@ -1,6 +1,6 @@
 version: 2
 
 sources:
-- name: northwind-328309
+- name: northwind_etl
 table:
-- name: orders
+- name: category

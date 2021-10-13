@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: This is the Customers Dimension table. It includes information about Northwind customers
+
+    columns:
+      - name: customer_sk
+        description: The primary key of the Customers Dimension table
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: The natural key of the customers
+        tests:
+          - unique
+          
+      - name: company_name
+        description: The customer's company name
+
+      - name: contact_name
+        description: The customer's contact name
+
+      - name: contact_title
+        description: The customer's contact title
+
+      - name: country
+        description: The customer's country
+
+      - name: region
+        description: The customer's region
+
+      - name: city
+        description: The customer's city
+
+      - name: address
+        description: The customer's address
+
+      - name: postal_code
+        description: TThe postal code of the customer's address
+
+      - name: phone
+        description: The customer's phone
+
+      - name: fax
+        description: The customer's fax     

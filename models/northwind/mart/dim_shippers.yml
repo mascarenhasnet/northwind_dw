@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_shippers
+    description: This is the Shippers Dimension table. It includes information about Northwind shippers
+    
+    columns:
+      - name: shipper_sk
+        description: The primary key of the Shippers Dimension table
+        tests:
+          - unique
+          - not_null
+         
+      - name: shipper_id
+        description: The natural key of the shippers
+        tests:
+          - not_null
+
+      - name: company_name
+        description: The shipper's company name       
+
+      - name: phone
+        description: The shipper's phone      

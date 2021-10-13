@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: This is the Products Dimension table. It includes information about Northwind products
+
+    columns:
+      - name: product_sk
+        description: The primary key of the Products Dimension table
+        tests:
+          - unique
+          - not_null
+
+      - name: product_id
+        description: The natural key of the products
+        tests:
+          - unique
+          - not_null
+
+      - name: supplier_id
+        description: The natural key of the products supplier
+
+      - name: category_id
+        description: The natural key of the products category
+
+      - name: product_name
+        description: The product's name
+
+      - name: unit_price
+        description: The product's unit_price
+
+      - name: units_in_stock
+        description: The product's units_in_stock
+      
+      - name: unit_on_order
+        description: The product's units_on_order
+      
+      - name: quantity_per_unit
+        description: The product's quantity_per_unit
+      
+      - name: is_discounted
+        description: the flag that indicates if the product is discounted
+      
+      - name: reorder_level
+        description: The product's reorder_level

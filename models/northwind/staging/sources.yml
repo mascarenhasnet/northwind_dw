@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: northwind_etl
+    description: This is the replica of the Postgres database used by the Indicium customer
+    tables:
+      - name: orders
+        description: This table contains data about Northwind order
+        
+      - name: order_details
+        description: This table contains data about Northwind order items
+
+      - name: customers
+        description: This table contains data about Northwind customers
+
+      - name: products
+        description: This table contains data about Northwind products
+
+      - name: suppliers
+        description: This table contains data about Northwind suppliers
+
+      - name: shippers
+        description: This table contains data about Northwind shippers

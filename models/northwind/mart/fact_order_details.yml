@@ -1,0 +1,78 @@
+version: 2
+
+models:
+  - name: fact_order_details
+    description: This is the Order Details Fact table. It includes information about Northwind orders and order items
+    
+    columns:
+      - name: order_id
+        description: The primary key of the order and order details
+        tests:
+          - not_null
+
+      - name: customer_fk
+        description: The foreign key of the order's customer
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_sk
+
+      - name: shipper_fk
+        description: The foreign key of the order's shipper
+        tests:
+          - relationships:
+              to: ref('dim_shippers')
+              field: shipper_sk
+
+      - name: order_date
+        description: The order's date
+        
+      - name: required_date
+        description: The order's required date
+        
+      - name: shipped_date
+        description: The order's shipped date
+        
+      - name: ship_name
+        description: The order's shipper name
+        
+      - name: ship_country
+        description: The order's shipper country
+
+      - name: ship_region
+        description: The order's shipper region
+
+      - name: ship_city
+        description: The order's shipper city
+
+      - name: ship_address
+        description: The order's shipper address
+
+      - name: ship_postal_code
+        description: The address' postal code of the order's shipper
+
+      - name: freight
+        description: The order's freight
+      
+      - name: product_fk
+        description: The foreign key of the product's order detail
+        tests:
+          - relationships:
+              to: ref('dim_products')
+              field: product_sk
+
+      - name: supplier_fk
+        description: The foreign key of the supplier's product
+        tests:
+          - relationships:
+              to: ref('dim_suppliers')
+              field: supplier_sk
+
+      - name: quantity
+        description: The order details' quantity
+
+      - name: unit_price
+        description: The product's unit price of the order detail
+
+      - name: discount
+        description: The product's discount of the order detail

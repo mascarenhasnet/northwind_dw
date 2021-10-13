@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: dim_suppliers
+    description: This is the Suppliers Dimension table. It includes information about Northwind suppliers
+    
+    columns:
+      - name: supplier_sk
+        description: The primary key of the Suppliers Dimension table
+        tests:
+          - unique
+          - not_null
+
+      - name: supplier_id
+        description: The natural key of the suppliers
+        tests:
+          - not_null
+        
+      - name: company_name
+        description: The supplier's company name
+
+      - name: contact_name
+        description: The supplier's contact name
+
+      - name: contact_title
+        description: The supplier's contact title
+
+      - name: country
+        description: The supplier's country
+
+      - name: region
+        description: The supplier's region
+        
+      - name: city
+        description: The supplier's city
+
+      - name: address
+        description: The supplier's address
+        
+      - name: postal_code
+        description: TThe postal code of the supplier's address
+
+      - name: fax
+        description: The supplier's fax
+
+      - name: phone
+        description: The supplier's phone
+        
+      - name: homepage
+        description: The supplier's homepage
